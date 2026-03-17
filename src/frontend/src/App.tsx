@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
   Calculator as CalcIcon,
+  Check,
+  EyeOff,
   ImageIcon,
   Send,
   Sparkles,
@@ -33,6 +41,64 @@ interface ChatMessage {
   role: "user" | "assistant";
   content: string;
   imageUrl?: string;
+}
+
+interface CloakOption {
+  id: string;
+  label: string;
+  title: string;
+  favicon: string;
+}
+
+const CLOAK_OPTIONS: CloakOption[] = [
+  { id: "off", label: "Off (QuickMind)", title: "QuickMind", favicon: "" },
+  {
+    id: "gdocs",
+    label: "Google Docs",
+    title: "Untitled document - Google Docs",
+    favicon: "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico",
+  },
+  {
+    id: "gclassroom",
+    label: "Google Classroom",
+    title: "Stream - Google Classroom",
+    favicon: "https://ssl.gstatic.com/classroom/favicon.png",
+  },
+  {
+    id: "youtube",
+    label: "YouTube",
+    title: "YouTube",
+    favicon: "https://www.youtube.com/favicon.ico",
+  },
+  {
+    id: "gmail",
+    label: "Gmail",
+    title: "Inbox - Gmail",
+    favicon: "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico",
+  },
+  {
+    id: "khan",
+    label: "Khan Academy",
+    title: "Khan Academy",
+    favicon: "https://cdn.kastatic.org/images/favicon.ico",
+  },
+];
+
+const CLOAK_STORAGE_KEY = "quickmind_cloak";
+
+function applyCloak(option: CloakOption) {
+  document.title = option.title || "QuickMind";
+  let link = document.querySelector<HTMLLinkElement>("link[rel*='icon']");
+  if (!link) {
+    link = document.createElement("link");
+    link.rel = "icon";
+    document.head.appendChild(link);
+  }
+  if (option.favicon) {
+    link.href = option.favicon;
+  } else {
+    link.href = "/favicon.ico";
+  }
 }
 
 const SUGGESTION_CHIPS = [
@@ -103,6 +169,10 @@ export default function App() {
   const [input, setInput] = useState("");
   const [isThinking, setIsThinking] = useState(false);
   const [showCalc, setShowCalc] = useState(false);
+  const [activeCloak, setActiveCloak] = useState<CloakOption>(() => {
+    const saved = localStorage.getItem(CLOAK_STORAGE_KEY);
+    return CLOAK_OPTIONS.find((o) => o.id === saved) ?? CLOAK_OPTIONS[0];
+  });
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -111,6 +181,17 @@ export default function App() {
   const { data: history } = useGetHistory(sessionId);
   const addMessageMutation = useAddMessage(sessionId);
   const clearMutation = useClearHistory(sessionId);
+
+  // Restore cloak on mount
+  useEffect(() => {
+    applyCloak(activeCloak);
+  }, [activeCloak]);
+
+  const handleCloakSelect = useCallback((option: CloakOption) => {
+    setActiveCloak(option);
+    applyCloak(option);
+    localStorage.setItem(CLOAK_STORAGE_KEY, option.id);
+  }, []);
 
   useEffect(() => {
     if (history && history.length > 0) {
@@ -207,6 +288,8 @@ export default function App() {
     }
   };
 
+  const isCloakActive = activeCloak.id !== "off";
+
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-background">
       <header className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-border/50 bg-background/80 backdrop-blur-sm z-10">
@@ -227,6 +310,48 @@ export default function App() {
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          {/* Tab Cloak Button */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                size="sm"
+                data-ocid="tabcloak.toggle_button"
+                className={`relative text-muted-foreground hover:text-primary hover:bg-primary/10 h-8 w-8 p-0 transition-all ${
+                  isCloakActive ? "text-amber-400 bg-amber-400/10" : ""
+                }`}
+                title="Tab Cloak"
+              >
+                <EyeOff className="w-4 h-4" />
+                {isCloakActive && (
+                  <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-amber-400" />
+                )}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="end"
+              className="w-52"
+              data-ocid="tabcloak.dropdown_menu"
+            >
+              <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                Tab Disguise
+              </div>
+              {CLOAK_OPTIONS.map((option, idx) => (
+                <DropdownMenuItem
+                  key={option.id}
+                  onClick={() => handleCloakSelect(option)}
+                  data-ocid={`tabcloak.option.${idx + 1}`}
+                  className="flex items-center justify-between cursor-pointer"
+                >
+                  <span>{option.label}</span>
+                  {activeCloak.id === option.id && (
+                    <Check className="w-3.5 h-3.5 text-primary ml-2 shrink-0" />
+                  )}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Button
             variant="ghost"
             size="sm"
