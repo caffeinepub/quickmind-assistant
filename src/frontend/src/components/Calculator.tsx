@@ -55,12 +55,40 @@ const PIN_KEYS = [
   { label: "\u232b", id: "pkb" },
 ];
 
+const GAME_SITES = [
+  { name: "Poxel", url: "https://poxel.io" },
+  { name: "2v2", url: "https://2v2.io" },
+  { name: "Fall Zone", url: "https://fallzone.io" },
+  { name: "Bloxd", url: "https://bloxd.io" },
+  { name: "Geo Lesson", url: "https://geography-lesson-11.us" },
+  { name: "Krunker", url: "https://krunker.io" },
+  { name: "Slither", url: "https://slither.io" },
+  { name: "Agar.io", url: "https://agar.io" },
+  { name: "1v1.LOL", url: "https://1v1.lol" },
+  { name: "Shell Shockers", url: "https://shellshock.io" },
+  { name: "Diep.io", url: "https://diep.io" },
+  { name: "Skribbl", url: "https://skribbl.io" },
+  { name: "Bonk.io", url: "https://bonk.io" },
+  { name: "SmashKarts", url: "https://smashkarts.io" },
+  { name: "CrazyGames", url: "https://www.crazygames.com" },
+];
+
+const CODE_MAP: Record<string, string | "ALL"> = {
+  "0000": "https://poxel.io",
+  "1111": "https://2v2.io",
+  "3333": "https://fallzone.io",
+  "4444": "https://bloxd.io",
+  "5555": "https://geography-lesson-11.us",
+  "6767": "ALL",
+};
+
 export default function Calculator({ onClose }: { onClose: () => void }) {
   const [calc, setCalc] = useState<CalcState>(initState);
   const [showPin, setShowPin] = useState(false);
   const [pin, setPin] = useState("");
   const [pinShake, setPinShake] = useState(false);
-  const [showIframe, setShowIframe] = useState(false);
+  const [iframeSrc, setIframeSrc] = useState<string | null>(null);
+  const [showPicker, setShowPicker] = useState(false);
   const pinInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -141,10 +169,17 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
     setPin((prev) => {
       const next = `${prev}${digit}`.slice(0, 4);
       if (next.length === 4) {
-        if (next === "0000") {
+        const match = CODE_MAP[next];
+        if (match) {
           setShowPin(false);
           setPin("");
-          setTimeout(() => setShowIframe(true), 200);
+          setTimeout(() => {
+            if (match === "ALL") {
+              setShowPicker(true);
+            } else {
+              setIframeSrc(match);
+            }
+          }, 200);
         } else {
           setPinShake(true);
           setTimeout(() => {
@@ -209,9 +244,47 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
 
   return (
     <>
+      {/* Game picker overlay (code 6767) */}
+      <AnimatePresence>
+        {showPicker && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[200] bg-black/90 flex flex-col items-center justify-center gap-6 overflow-auto py-8"
+          >
+            <p className="text-white text-xl font-bold tracking-wide">
+              Choose a Game
+            </p>
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 max-w-2xl px-4">
+              {GAME_SITES.map((site) => (
+                <button
+                  key={site.url}
+                  type="button"
+                  onClick={() => {
+                    setShowPicker(false);
+                    setIframeSrc(site.url);
+                  }}
+                  className="h-16 rounded-xl bg-[oklch(0.2_0.015_255)] hover:bg-[oklch(0.28_0.02_255)] border border-white/10 text-white font-semibold text-sm transition-all active:scale-95 px-2"
+                >
+                  {site.name}
+                </button>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowPicker(false)}
+              className="text-sm text-white/50 hover:text-white transition-colors mt-2"
+            >
+              Cancel
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Iframe overlay */}
       <AnimatePresence>
-        {showIframe && (
+        {iframeSrc && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -220,8 +293,8 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
             className="fixed inset-0 z-[200] bg-black"
           >
             <iframe
-              src="https://poxel.io"
-              title="Poxel"
+              src={iframeSrc}
+              title="Game"
               className="w-full h-full border-0"
               style={{
                 willChange: "transform",
@@ -232,7 +305,7 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
             />
             <button
               type="button"
-              onClick={() => setShowIframe(false)}
+              onClick={() => setIframeSrc(null)}
               data-ocid="iframe.close_button"
               className="absolute top-4 left-4 z-10 flex items-center gap-1.5 bg-black/70 hover:bg-black/90 text-white text-sm px-3 py-1.5 rounded-lg backdrop-blur-sm border border-white/20 transition-all"
             >
@@ -313,6 +386,9 @@ export default function Calculator({ onClose }: { onClose: () => void }) {
               <div className="text-center">
                 <Lock className="w-8 h-8 text-accent mx-auto mb-2" />
                 <p className="text-sm text-muted-foreground">Enter Code</p>
+                <p className="text-xs text-muted-foreground/50 mt-1">
+                  0000 · 1111 · 3333 · 4444 · 5555 · 6767
+                </p>
               </div>
 
               <motion.div

@@ -9,6 +9,8 @@ import {
   Calculator as CalcIcon,
   Check,
   EyeOff,
+  Gamepad2,
+  Globe,
   ImageIcon,
   Send,
   Sparkles,
@@ -19,6 +21,8 @@ import {
 import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Calculator from "./components/Calculator";
+import Embedder from "./components/Embedder";
+import GamesPanel from "./components/GamesPanel";
 import {
   useAddMessage,
   useClearHistory,
@@ -154,13 +158,13 @@ function MathContent({ content, msgId }: { content: string; msgId: string }) {
 }
 
 const IMAGE_RESPONSES = [
-  "I can see your problem! Let me work through it... Based on what I see, the answer appears to be correct \u2014 double-check your arithmetic on the highlighted steps.",
+  "I can see your problem! Let me work through it... Based on what I see, the answer appears to be correct — double-check your arithmetic on the highlighted steps.",
   "Got your image! I can see the math problem clearly. Working through it: the key insight here is to simplify the left side first, then solve for the variable. Your approach looks right!",
-  "Analyzing your image... I can see the equations. The solution involves substituting the second equation into the first \u2014 you should get a clean answer from there.",
-  "I see the problem! The diagram shows a geometric setup. Using the Pythagorean theorem (a\u00b2 + b\u00b2 = c\u00b2) on the highlighted triangle gives you the missing side.",
-  "Image received! The expression simplifies nicely \u2014 factor out the common term first, and you'll see the pattern emerge. Looks like a quadratic with two real solutions.",
+  "Analyzing your image... I can see the equations. The solution involves substituting the second equation into the first — you should get a clean answer from there.",
+  "I see the problem! The diagram shows a geometric setup. Using the Pythagorean theorem (a² + b² = c²) on the highlighted triangle gives you the missing side.",
+  "Image received! The expression simplifies nicely — factor out the common term first, and you'll see the pattern emerge. Looks like a quadratic with two real solutions.",
   "Great question in that image! I can see this is a word problem. Break it into steps: identify what's given, what's being asked, then write the equation. You're on the right track!",
-  "I can analyze your image! The mathematical relationship shown here follows directly from the formula \u2014 substitute the known values and solve step by step for the unknown variable.",
+  "I can analyze your image! The mathematical relationship shown here follows directly from the formula — substitute the known values and solve step by step for the unknown variable.",
 ];
 
 export default function App() {
@@ -169,6 +173,8 @@ export default function App() {
   const [input, setInput] = useState("");
   const [isThinking, setIsThinking] = useState(false);
   const [showCalc, setShowCalc] = useState(false);
+  const [showEmbedder, setShowEmbedder] = useState(false);
+  const [showGames, setShowGames] = useState(false);
   const [activeCloak, setActiveCloak] = useState<CloakOption>(() => {
     const saved = localStorage.getItem(CLOAK_STORAGE_KEY);
     return CLOAK_OPTIONS.find((o) => o.id === saved) ?? CLOAK_OPTIONS[0];
@@ -351,6 +357,34 @@ export default function App() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          {/* Games Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setShowGames((v) => !v)}
+            data-ocid="games.toggle_button"
+            className={`text-muted-foreground hover:text-primary hover:bg-primary/10 h-8 w-8 p-0 transition-all ${
+              showGames ? "text-primary bg-primary/10" : ""
+            }`}
+            title="Games Library"
+          >
+            <Gamepad2 className="w-4 h-4" />
+          </Button>
+
+          {/* Embedder / Web Search Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setShowEmbedder((v) => !v)}
+            data-ocid="embedder.toggle_button"
+            className={`text-muted-foreground hover:text-primary hover:bg-primary/10 h-8 w-8 p-0 transition-all ${
+              showEmbedder ? "text-primary bg-primary/10" : ""
+            }`}
+            title="Web Search / Embedder"
+          >
+            <Globe className="w-4 h-4" />
+          </Button>
 
           <Button
             variant="ghost"
@@ -556,6 +590,16 @@ export default function App() {
           caffeine.ai
         </a>
       </div>
+
+      {/* Games Panel */}
+      <AnimatePresence>
+        {showGames && <GamesPanel onClose={() => setShowGames(false)} />}
+      </AnimatePresence>
+
+      {/* Embedder / Web Search panel */}
+      <AnimatePresence>
+        {showEmbedder && <Embedder onClose={() => setShowEmbedder(false)} />}
+      </AnimatePresence>
 
       {/* Calculator floating panel */}
       <AnimatePresence>

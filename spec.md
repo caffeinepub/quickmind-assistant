@@ -1,29 +1,28 @@
 # QuickMind Assistant
 
 ## Current State
-A chat-based AI assistant app with text input, message history, suggestion chips, and a local AI engine (processMessage). No image support, no calculator.
+App has a Calculator panel (with iframe games behind codes) and an Embedder panel (with quick links). The game picker behind code 6767 only shows 5 sites. The user wants many more games like calcsolver.net.
 
 ## Requested Changes (Diff)
 
 ### Add
-- Image upload button in the chat footer so users can attach an image (e.g. a photo of a math problem) to be "solved". The image should display in the chat bubble and the AI should respond with a simulated solve message.
-- A Calculator panel accessible via a button/tab in the UI (floating or sidebar). Full numeric keypad with standard ops (+, -, *, /, =, C, ±, %).
-- A "CODE" button on the calculator. When pressed, it opens a 4-digit PIN entry overlay. If the user enters "0000", it navigates to (opens) poxel.io embedded in an iframe that fills the screen. The iframe should be rendered with `will-change: transform` and smooth 60fps optimizations. A close/back button lets users exit the iframe and return to the app.
-- If wrong PIN is entered, show an error shake animation.
+- New `GamesPanel.tsx` component: a full-screen overlay with a searchable, categorized grid of games
+- `gamesData.ts`: large curated list of game entries (title, url, category, emoji)
+- Gamepad button in the header to open/close the Games panel
+- Each game tile opens the game in a clean popup window (no toolbar, no address bar) using existing `openInPopup` pattern
+- Categories: IO Games, Arcade, Puzzle, Sports, Action, Strategy, Classics, Platforms
+- Search bar to filter games by name
+- 200+ individual game entries plus links to portals that collectively host thousands
 
 ### Modify
-- Chat input area: add an image upload icon button next to the text input.
-- Navigation/layout: add a calculator toggle button in the header or as a floating action button.
+- `App.tsx`: add gamepad icon button in header, add GamesPanel component
+- `Calculator.tsx`: expand the game picker (code 6767) to show more games, including link to full games panel
 
 ### Remove
-- Nothing removed.
+- Nothing removed
 
 ## Implementation Plan
-1. Create `Calculator.tsx` component with full keypad, CODE button, PIN overlay, and poxel.io iframe embed.
-2. Create `ImageUpload` hook/utility for reading image files as data URLs.
-3. Update `App.tsx`:
-   - Add calculator toggle button in header.
-   - Conditionally render `<Calculator />` as a modal/overlay.
-   - Add image upload button in footer next to input.
-   - When image is attached, display it in the user bubble and trigger a simulated AI response.
-4. Optimize iframe with CSS: `will-change: transform`, `image-rendering: auto`, smooth transitions.
+1. Create `gamesData.ts` with large games list organized by category
+2. Create `GamesPanel.tsx` with search, category tabs, grid of game tiles
+3. Update `App.tsx` to wire in GamesPanel with header toggle button
+4. Update Calculator.tsx game picker to reference more games
