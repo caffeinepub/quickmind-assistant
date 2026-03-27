@@ -383,6 +383,217 @@ const KB: Record<string, string> = {
     "**Nutrition** is the science of how food affects health. The six essential nutrients are: **carbohydrates** (primary energy source), **proteins** (building blocks for cells and tissues), **fats** (energy and cell function), **vitamins** (metabolic functions), **minerals** (bone, nerve, and metabolic functions), and **water** (essential for all biological processes). A balanced diet rich in whole foods, vegetables, fruits, and lean proteins supports optimal health and reduces disease risk.",
   protein:
     "**Proteins** are large, complex molecules made of chains of **amino acids** — essential to virtually all biological processes. They build and repair tissues, make enzymes and hormones, and support immune function. Complete protein sources (containing all essential amino acids) include meat, fish, eggs, dairy, and soy. The human body needs about **0.8g of protein per kg of body weight** daily, though athletes may need significantly more.",
+
+  // ── BRAINROT / GEN Z SLANG ────────────────────────────────────────────────
+  rizz: "**Rizz** is Gen Z slang for charm, charisma, or the ability to attract others — especially romantically. Someone with 'rizz' can effortlessly win people over with their personality or looks. 'W rizz' means great charm; 'L rizz' or 'no rizz' means terrible at it. The term was popularized by streamer Kai Cenat around 2021–2022.",
+  sigma:
+    "**Sigma** in Gen Z/internet culture refers to a 'lone wolf' archetype — someone independent, self-reliant, and operating outside the typical social hierarchy. A 'sigma male' doesn't seek validation and succeeds on their own terms. Often used humorously in 'sigma grindset' memes.",
+  gyatt:
+    "**Gyatt** (or 'gyat') is slang originating from the streamer YourRAGE — an exclamation of surprise or appreciation, typically for someone with a curvy physique. Derived from 'God damn.' Widely used in gaming and streaming communities.",
+  bussin:
+    "**Bussin** is AAVE-originated slang meaning something is extremely good, especially food. 'This pizza is bussin' = this pizza is really good. Popularized in mainstream social media around 2020–2021.",
+  "no cap":
+    "**No cap** means 'no lie' or 'for real' — used to emphasize that something is true. 'That movie was fire, no cap' = 'That movie was great, I'm not lying.' The opposite is 'cap' meaning a lie or exaggeration.",
+  slay: "**Slay** means to perform or look exceptionally well. 'She slayed that outfit' = she looked amazing. Originally from ballroom culture and LGBTQ+ communities, now mainstream. Used as a compliment or exclamation of approval.",
+  npc: "**NPC** stands for Non-Player Character — video game term for characters controlled by the computer. In internet culture, calling someone an NPC means they lack independent thought, just follow scripts or trends, and can't think for themselves.",
+  based:
+    "**Based** means holding confident opinions/being authentic without caring about social approval. Originates from Lil B 'the Based God.' 'That's based' = that's admirable/true/authentic.",
+  cringe:
+    "**Cringe** means something embarrassing, awkward, or uncomfortable to witness. 'That was so cringe' = that was embarrassing. Can also be used self-deprecatingly.",
+  "fr fr":
+    "**Fr fr** means 'for real, for real' — an intensified version of 'fr' (for real), used to strongly affirm something is true or serious.",
+  lowkey:
+    "**Lowkey** means subtly, to a moderate degree, or secretly. 'I lowkey like that song' = I kind of like it but don't want to fully admit it. Opposite is 'highkey' meaning obviously or openly.",
+  sus: "**Sus** is short for suspicious or suspect, popularized by the game *Among Us* (2020). Used to describe something sketchy or someone acting guilty. 'That's sus' = that seems suspicious.",
+  vibe: "**Vibe** can mean a mood, atmosphere, or feeling ('good vibes only'), or to relax and enjoy yourself ('just vibing'). Also used as a compliment: 'you're a vibe' means someone has a great energy or presence.",
+  salty:
+    "**Salty** means bitter, upset, or irritated — usually over a minor loss or slight. 'He's so salty about losing that game' = he's really annoyed about it.",
+  ghosting:
+    "**Ghosting** means suddenly cutting off all communication with someone without explanation. Often used in dating context but applies broadly. 'She ghosted me' = she stopped responding to all messages without warning.",
+  goat: "**GOAT** stands for **Greatest Of All Time**. Used to refer to the best ever in a field. 'LeBron is the GOAT' or 'Michael Jordan is the GOAT' in basketball.",
+  fire: "In slang, **fire** means extremely good, hot, or impressive. 'That track is fire' = that song is amazing. Can also be used as an exclamation of approval.",
+  clout:
+    "**Clout** means social influence, popularity, or fame — especially online. 'Clout chasing' = doing things purely for attention or followers.",
+  ratio:
+    "On social media, getting **ratioed** means your reply got more likes/engagement than your original post, implying you said something unpopular. 'Ratio + L + no cap' is a common dismissal.",
+  sheesh:
+    "**Sheesh** is an exclamation of surprise, admiration, or disbelief. Popularized in 2021 on TikTok. 'Sheesh!' = wow, that's impressive/surprising.",
+  "it's giving":
+    "**It's giving** means something has a certain vibe or energy. 'It's giving main character energy' = it has that feeling. Originated from LGBTQ+ ballroom culture.",
+  delulu:
+    "**Delulu** is internet slang shortening of 'delusional' — used to describe someone holding unrealistic beliefs, often about celebrities or romantic situations. 'She's so delulu thinking he likes her.'",
+  skibidi:
+    "**Skibidi** originated from the YouTube series *Skibidi Toilet* by DaFuq!?Boom! — became a massive Gen Alpha/Gen Z meme phrase used to mean something weird, chaotic, or just as nonsense filler. 'That's so skibidi' often just means random or weird.",
+  ohio: "In internet meme culture, **Ohio** represents the strange, cursed, or bizarre. 'Only in Ohio' captions absurd images. It's a long-running joke that Ohio is the epicenter of weird events.",
+  rizzler:
+    "The **Rizzler** is a popular Gen Z/Gen Alpha meme figure representing the ultimate master of rizz (charm). Often used in 'sigma' or 'rizzler' meme edits.",
+  "brain rot":
+    "**Brain rot** refers to content that's mindlessly entertaining or low-quality but weirdly addictive — causing a 'rotting' of the brain. Also used self-deprecatingly: 'I have major brain rot from watching TikTok all day.'",
+
+  // ── FAMOUS PEOPLE ─────────────────────────────────────────────────────────
+  "albert einstein":
+    "**Albert Einstein** (1879–1955) was a German-born theoretical physicist, widely regarded as one of the greatest scientists in history. He developed the **theory of relativity** (E=mc²), revolutionizing our understanding of space, time, and energy. He won the **Nobel Prize in Physics in 1921** for discovering the photoelectric effect. He also contributed to quantum mechanics. Known for his wild hair and thought experiments, he fled Nazi Germany in 1933 and settled in the USA.",
+  "isaac newton":
+    "**Isaac Newton** (1643–1727) was an English mathematician and physicist who formulated the **laws of motion** and universal **gravitation**, and independently developed calculus. His book *Principia Mathematica* (1687) is one of the most important scientific works ever written. Legend has it an apple falling inspired his gravity theory.",
+  "charles darwin":
+    "**Charles Darwin** (1809–1882) was an English naturalist who proposed the theory of **evolution by natural selection** in his landmark 1859 book *On the Origin of Species*. After his 5-year voyage on the HMS Beagle, he concluded that species evolve over time through survival of the fittest. His work transformed biology and our understanding of life on Earth.",
+  "nikola tesla":
+    "**Nikola Tesla** (1856–1943) was a Serbian-American inventor, electrical engineer, and futurist best known for developing the **alternating current (AC)** electrical system. He also invented the **Tesla coil**, contributed to radio technology, and held over 300 patents. He famously feuded with Thomas Edison over AC vs DC power.",
+  "thomas edison":
+    "**Thomas Edison** (1847–1931) was an American inventor who developed the **phonograph**, a practical **incandescent light bulb**, and the first commercial power utility. He held **1,093 patents**, the most of any American inventor. His Menlo Park laboratory was one of the first industrial research labs.",
+  "leonardo da vinci":
+    "**Leonardo da Vinci** (1452–1519) was an Italian **Renaissance polymath** — painter, sculptor, architect, musician, mathematician, engineer, and scientist. He painted the **Mona Lisa** and *The Last Supper*. His notebooks contained visionary ideas centuries ahead of their time, including flying machines and solar power.",
+  "william shakespeare":
+    "**William Shakespeare** (1564–1616) was an English playwright, poet, and actor — widely considered the **greatest writer in the English language**. He wrote **37 plays** (including Hamlet, Macbeth, Romeo and Juliet, Othello) and 154 sonnets. He co-owned the **Globe Theatre** in London.",
+  napoleon:
+    "**Napoleon Bonaparte** (1769–1821) was a French military and political leader who rose to prominence during the French Revolution and became **Emperor of the French** (1804–1815). He conquered much of Europe, reformed French law (Napoleonic Code), and was eventually defeated at the **Battle of Waterloo** in 1815.",
+  cleopatra:
+    "**Cleopatra VII** (69–30 BC) was the last active ruler of ancient Egypt, famous for her intelligence, political acumen, and alliances with **Julius Caesar** and **Mark Antony**. She spoke multiple languages and was the first Ptolemaic ruler to learn Egyptian. After her defeat by Rome, she reportedly died by snake bite.",
+  "abraham lincoln":
+    "**Abraham Lincoln** (1809–1865) was the **16th President of the United States**, serving during the Civil War. He issued the **Emancipation Proclamation** in 1863, freeing enslaved people in Confederate states, and is credited with preserving the Union. He was assassinated at Ford's Theatre in April 1865.",
+  lincoln:
+    "**Abraham Lincoln** (1809–1865) was the 16th US President who led the country through the **Civil War** and issued the **Emancipation Proclamation**. He was assassinated by John Wilkes Booth at Ford's Theatre on April 14, 1865.",
+  "martin luther king":
+    "**Martin Luther King Jr.** (1929–1968) was an American Baptist minister and activist who was a key leader in the **civil rights movement**. He advocated nonviolent protest and delivered the famous **'I Have a Dream'** speech at the 1963 March on Washington. He won the **Nobel Peace Prize in 1964**. He was assassinated on April 4, 1968.",
+  "nelson mandela":
+    "**Nelson Mandela** (1918–2013) was a South African anti-apartheid leader who spent **27 years in prison** before becoming **South Africa's first Black president** (1994–1999). He received the Nobel Peace Prize in 1993 and became a global symbol of justice, reconciliation, and dignity.",
+  "stephen hawking":
+    "**Stephen Hawking** (1942–2018) was an English theoretical physicist who made landmark contributions to understanding **black holes** and cosmology. He wrote the best-selling *A Brief History of Time* (1988). Despite being diagnosed with ALS at 21 and losing most of his mobility, he worked productively for decades, communicating via synthesized speech.",
+  "elon musk":
+    "**Elon Musk** (born 1971) is a South African-born entrepreneur and CEO of **Tesla** (electric vehicles), **SpaceX** (rockets and space exploration), and owner of **X** (formerly Twitter). He co-founded PayPal, founded Neuralink, and The Boring Company. Frequently listed as one of the wealthiest people in the world.",
+  "bill gates":
+    "**Bill Gates** (born 1955) co-founded **Microsoft** with Paul Allen in 1975, creating MS-DOS and Windows, which helped make personal computers mainstream. He was the world's richest person for many years. Through the **Bill & Melinda Gates Foundation**, he has donated tens of billions to global health and education.",
+  "steve jobs":
+    "**Steve Jobs** (1955–2011) co-founded **Apple Inc.** with Steve Wozniak and Ronald Wayne in 1976. He oversaw the creation of the **Mac, iPod, iPhone, and iPad**, revolutionizing personal computing and mobile technology. Known for his perfectionism, charisma, and the famous 'one more thing' product reveals.",
+  "jeff bezos":
+    "**Jeff Bezos** (born 1964) founded **Amazon** in 1994 as an online bookstore that grew into the world's largest e-commerce and cloud computing company (AWS). He founded **Blue Origin**, a private spaceflight company. He stepped down as Amazon CEO in 2021.",
+  "barack obama":
+    "**Barack Obama** (born 1961) was the **44th President of the United States** (2009–2017), the first African-American to hold that office. Before becoming president, he was a US Senator from Illinois. He received the **Nobel Peace Prize in 2009**. He oversaw the Affordable Care Act and the operation that killed Osama bin Laden.",
+
+  // ── HISTORY ───────────────────────────────────────────────────────────────
+  "world war ii":
+    "**World War II** (1939–1945) was the deadliest conflict in history, with approximately 70–85 million deaths. The Allies defeated Nazi Germany and Imperial Japan. Key events included the Holocaust, D-Day invasion, and the use of atomic bombs on Hiroshima and Nagasaki.",
+  "civil war":
+    "The **American Civil War** (1861–1865) was fought between the Union (northern states) and the Confederacy (southern states) primarily over slavery and states' rights. The Union won, slavery was abolished via the 13th Amendment, and President Lincoln was assassinated shortly after. About 620,000–750,000 soldiers died.",
+  "ancient greece":
+    "**Ancient Greece** (c. 800–146 BC) was the birthplace of **democracy, philosophy, the Olympics, and Western civilization**. City-states like Athens, Sparta, and Corinth shaped culture. Key figures: Socrates, Plato, Aristotle (philosophy), Homer (epics), Archimedes (science), Alexander the Great (conquest). Greek myths continue to influence culture today.",
+  "industrial revolution":
+    "The **Industrial Revolution** (c. 1760–1840) began in Britain and transformed manufacturing, transportation, and society. Steam engines, textile mills, and factories replaced hand production. It led to urbanization, child labor abuses, and eventually better living standards. It set the stage for the modern economy.",
+  slavery:
+    "**Slavery** is the system of owning people as property, forcing them to work without pay. It has existed throughout human history but the **transatlantic slave trade** (1500s–1800s) forcibly transported approximately **12 million Africans** to the Americas. The US abolished slavery in 1865 (13th Amendment). Brazil was the last country in the Americas to abolish it in 1888.",
+  columbus:
+    "**Christopher Columbus** (1451–1506) was an Italian explorer who, sponsored by Spain, made four voyages to the Americas starting in **1492**, reaching the Caribbean. His voyages opened sustained contact between Europe and the Americas — often called the **'Columbian Exchange'** — though it also led to colonization and the devastation of indigenous populations.",
+  "martin luther":
+    "**Martin Luther** (1483–1546) was a German theologian who sparked the **Protestant Reformation** in 1517 by publishing his **95 Theses**, criticizing Catholic Church practices. He believed in salvation through faith alone, not works or indulgences. His ideas spread rapidly and led to the split of Christianity into Catholic and Protestant denominations.",
+
+  // ── TECHNOLOGY ────────────────────────────────────────────────────────────
+  chatgpt:
+    "**ChatGPT** is a large language model chatbot developed by **OpenAI**, launched publicly in November 2022. Built on the GPT architecture, it can generate human-like text, answer questions, write code, summarize documents, and engage in conversation. It became one of the fastest-growing applications ever, reaching 100 million users in two months.",
+  "social media":
+    "**Social media** refers to online platforms that enable users to create and share content and interact with others. Major platforms include **Facebook** (Meta), **Instagram**, **TikTok**, **Twitter/X**, **YouTube**, **Snapchat**, and **LinkedIn**. Social media has transformed communication, marketing, politics, and culture, while also raising concerns about privacy, mental health, and misinformation.",
+  cybersecurity:
+    "**Cybersecurity** is the practice of protecting computers, networks, and data from unauthorized access, attacks, and damage. Key threats include viruses, malware, phishing, ransomware, and DDoS attacks. Best practices include strong passwords, two-factor authentication, encryption, and regular software updates.",
+  "virtual reality":
+    "**Virtual Reality (VR)** creates an immersive simulated environment using a headset and controllers. Users can interact with 3D environments as if physically present. VR is used for gaming (Meta Quest, PlayStation VR), training simulations, medical treatment, education, and virtual tours. **Augmented Reality (AR)** overlays digital content on the real world.",
+  "cloud computing":
+    "**Cloud computing** delivers computing services — servers, storage, databases, networking, software — over the Internet ('the cloud'). Instead of owning hardware, users pay for what they use. Major providers: **Amazon Web Services (AWS)**, **Microsoft Azure**, **Google Cloud**. It enables scalability, remote access, and cost efficiency for businesses of all sizes.",
+
+  // ── SCIENCE: Space & Astronomy ────────────────────────────────────────────
+  "solar system":
+    "Our **Solar System** consists of the **Sun** and everything gravitationally bound to it: 8 planets (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune), dwarf planets (including Pluto), moons, asteroids, and comets. It formed about **4.6 billion years ago** from a collapsing cloud of gas and dust.",
+  nasa: "**NASA** (National Aeronautics and Space Administration) is the US government agency responsible for civilian space exploration. Founded in **1958**, it has achieved milestones including: Mercury and Apollo missions, the Moon landings (1969), Space Shuttle program, International Space Station, Mars rovers, and James Webb Space Telescope.",
+
+  // ── GEOGRAPHY ────────────────────────────────────────────────────────────
+  sahara:
+    "The **Sahara** is the world's largest hot desert, covering approximately **9.2 million km²** across North Africa — roughly the size of the United States. Despite its image as endless sand, 25% is sand dunes (ergs); the rest is rocky plateau and gravel. Temperatures can exceed 50°C (122°F), yet several million people live there.",
+  nile: "The **Nile River** in Africa is one of the world's longest rivers, stretching about **6,650 km (4,130 miles)** through 11 countries. Historically, it was the lifeblood of ancient Egyptian civilization. The river flows northward into the Mediterranean Sea through Egypt, with key tributaries in Ethiopia and Uganda.",
+  everest:
+    "**Mount Everest** is Earth's highest mountain at **8,848.86 m (29,031.7 ft)**. Located in the Himalayas on the Nepal-China border. First climbed by Edmund Hillary and Tenzing Norgay in 1953. About 800+ climbers attempt the summit each year.",
+  "grand canyon":
+    "The **Grand Canyon** in Arizona, USA is one of the world's most impressive natural landmarks, carved by the Colorado River over millions of years. It's **446 km (277 miles) long**, up to 29 km wide, and over 1.6 km deep. Its colorful rock layers reveal nearly **2 billion years of Earth's geological history**.",
+
+  // ── MATH ─────────────────────────────────────────────────────────────────
+  algebra:
+    "**Algebra** is the branch of mathematics dealing with symbols (variables) and the rules for manipulating them. It allows us to solve equations and express general rules. Key concepts: **variables** (letters representing unknowns), **equations** (expressions set equal), **linear equations** (y = mx + b), and **quadratic equations** (ax² + bx + c = 0).",
+  geometry:
+    "**Geometry** is the branch of math concerned with shapes, sizes, and properties of figures and spaces. Key topics: **angles**, **triangles** (3 sides), **circles** (πr²), **polygons**, **3D shapes** (volume and surface area), and coordinate geometry. Euclidean geometry, based on Euclid's axioms, is the foundation of classical geometry.",
+  calculus:
+    "**Calculus** is the mathematical study of continuous change, developed independently by **Newton** and **Leibniz** in the 17th century. It has two main branches: **differentiation** (finding rates of change/slopes) and **integration** (finding areas under curves). Calculus is fundamental to physics, engineering, economics, and computer science.",
+  statistics:
+    "**Statistics** is the science of collecting, analyzing, and interpreting data. Key concepts: **mean** (average), **median** (middle value), **mode** (most common), **standard deviation** (spread of data), **probability** (likelihood of events), **correlation** (relationship between variables). Used in science, business, medicine, and social sciences.",
+  fibonacci:
+    "The **Fibonacci sequence** is a series where each number is the sum of the two preceding ones: **0, 1, 1, 2, 3, 5, 8, 13, 21, 34...** It appears throughout nature (flower petals, spiral shells, tree branching). The ratio of consecutive Fibonacci numbers approaches the **Golden Ratio** (φ ≈ 1.618), found in art and architecture.",
+  "prime number":
+    "A **prime number** is a whole number greater than 1 that has no divisors other than 1 and itself. Examples: 2, 3, 5, 7, 11, 13, 17... The number 2 is the only even prime. There are infinitely many primes (proved by Euclid). Prime numbers are crucial in cryptography and computer security.",
+
+  // ── HEALTH & MEDICINE ────────────────────────────────────────────────────
+  immune:
+    "The **immune system** is the body's defense against infection and disease. It includes white blood cells, antibodies, the lymphatic system, thymus, spleen, and bone marrow. When a pathogen enters, the immune system produces **antibodies** specifically targeting it. **Vaccines** train the immune system to recognize and fight specific pathogens.",
+  cancer:
+    "**Cancer** is a group of diseases involving uncontrolled cell growth. There are over 100 types. Key risk factors include genetic mutations, tobacco, UV radiation, certain chemicals, and some viruses. Treatment options include surgery, chemotherapy, radiation, immunotherapy, and targeted therapy. Early detection greatly improves survival rates.",
+  diabetes:
+    "**Diabetes** is a chronic condition affecting how the body processes blood sugar (glucose). **Type 1** is autoimmune (the body doesn't produce insulin); **Type 2** is lifestyle-related (the body doesn't use insulin properly). Worldwide, over **500 million people** have diabetes. Managed through diet, exercise, medication, and insulin therapy.",
+  covid:
+    "**COVID-19** is an infectious disease caused by the coronavirus **SARS-CoV-2**, first identified in Wuhan, China in late 2019. It became a global pandemic in 2020. Symptoms range from mild (cough, fever) to severe (pneumonia, death). Vaccines developed by Pfizer, Moderna, and others provided significant protection. The pandemic had profound impacts on global health, economies, and daily life.",
+
+  // ── SPORTS ────────────────────────────────────────────────────────────────
+  soccer:
+    "**Soccer** (football outside the US) is the world's most popular sport with over **4 billion fans**. FIFA governs the sport, and the **FIFA World Cup** (held every 4 years) is the most-watched sporting event. Top players include Pelé, Diego Maradona, Lionel Messi, and Cristiano Ronaldo. The English Premier League, La Liga, and Bundesliga are top club leagues.",
+  baseball:
+    "**Baseball** is a bat-and-ball sport played between two teams of 9, on a diamond-shaped field with four bases. **MLB** (Major League Baseball) has 30 teams in the US and Canada. The **World Series** is the annual championship. Known as 'America's pastime,' it has been played professionally since the 1800s.",
+  lion: "The **lion** (*Panthera leo*) is often called the 'king of the jungle,' though it actually lives in grasslands and savannas of sub-Saharan Africa. Males have distinctive manes. Lions live in social groups called **prides**. They're apex predators hunting wildebeest, zebra, and buffalo. They sleep up to 20 hours a day.",
+  elephant:
+    "**Elephants** are the largest land animals on Earth. There are three species: African bush elephant, African forest elephant, and Asian elephant. They have highly developed brains, show empathy, mourn their dead, and use tools. An elephant's trunk has ~100,000 muscles and can lift 350 kg. They live 60–70 years.",
+  dolphin:
+    "**Dolphins** are highly intelligent marine mammals known for their playful behavior and complex communication. They use **echolocation** to navigate and hunt. Bottlenose dolphins are the most studied. They live in pods, demonstrate self-awareness (mirror test), and have helped humans at sea. They breathe air through a blowhole.",
+  shark:
+    "**Sharks** are cartilaginous fish that have existed for over **450 million years** — predating dinosaurs. There are ~500 species. The great white shark is the largest predatory fish. Sharks are apex predators crucial to ocean health. Contrary to their reputation, only ~10 human deaths from shark attacks occur per year globally.",
+  dog: "**Dogs** (*Canis lupus familiaris*) were the first domesticated animals, diverging from wolves ~15,000 years ago. There are over 340 recognized breeds. Dogs have ~300 million olfactory receptors (humans have ~6 million), making their sense of smell 10,000–100,000× better than ours. They can detect diseases, track people, and assist with disabilities.",
+  cat: "**Cats** (*Felis catus*) were domesticated about 10,000 years ago in the Near East, coinciding with the development of agriculture (to control rodents). There are 40+ recognized breeds. Cats sleep 12–16 hours a day, have excellent night vision, and purr at frequencies (25–150 Hz) that may promote healing. They're the most popular pet in the world.",
+
+  // ── US STATES & CAPITALS ──────────────────────────────────────────────────
+  alabama:
+    "**Alabama** is a US state in the Deep South. Capital: **Montgomery**. Known as the 'Heart of Dixie.' Home to NASA's Marshall Space Flight Center in Huntsville.",
+  alaska:
+    "**Alaska** is the largest US state by area, located in the far northwest of North America. Capital: **Juneau**. Known for stunning wilderness, the Northern Lights, and the Iditarod dog sled race.",
+  arizona:
+    "**Arizona** is a southwestern US state known for the **Grand Canyon**. Capital: **Phoenix** (also the largest city). Other landmarks: Monument Valley, Sedona red rocks, Saguaro cacti.",
+  california:
+    "**California** is the most populous US state and the world's 5th largest economy. Capital: **Sacramento**. Known for Hollywood, Silicon Valley, Yosemite, and the Golden Gate Bridge.",
+  colorado:
+    "**Colorado** is known for the Rocky Mountains and outdoor recreation. Capital: **Denver**. Home to Rocky Mountain National Park and many world-class ski resorts.",
+  florida:
+    "**Florida** is the southernmost contiguous US state, known for beaches, theme parks (Disney World), and the Everglades. Capital: **Tallahassee**. Second most visited US state.",
+  georgia:
+    "**Georgia** is a southeastern US state. Capital: **Atlanta**, home of Coca-Cola and CNN headquarters. Georgia is a major hub for business, film production, and history.",
+  hawaii:
+    "**Hawaii** is the only US state in the Pacific Ocean and the only state outside North America. Capital: **Honolulu**. Made up of 137 volcanic islands. Known for beaches, surfing, and hula.",
+  illinois:
+    "**Illinois** is a Midwestern US state. Capital: **Springfield** (Lincoln's home). Largest city: **Chicago**, known for the blues, jazz, deep-dish pizza, and architecture.",
+  "new york":
+    "**New York** is the most populous US city and a global financial, cultural, and media capital. New York State's capital is **Albany**. NYC includes Manhattan, Brooklyn, Queens, the Bronx, and Staten Island. The Statue of Liberty, Times Square, and Central Park are iconic landmarks.",
+  texas:
+    "**Texas** is the second largest US state by area and population. Capital: **Austin**. Known for oil, cattle ranching, NASA's Johnson Space Center, and BBQ culture. Has the 9th largest economy in the world.",
+
+  // ── MUSIC & ART ───────────────────────────────────────────────────────────
+  "hip hop":
+    "**Hip hop** is a cultural movement and music genre originating in the Bronx, New York, in the early 1970s among African-American and Latino communities. It encompasses **rapping** (MCing), **DJing**, **breakdancing**, and **graffiti art**. Pioneers include DJ Kool Herc, Grandmaster Flash, and Afrika Bambaataa. Later artists: Tupac, Biggie, Jay-Z, Eminem, Kendrick Lamar.",
+  "pop music":
+    "**Pop music** (popular music) is a genre defined by broad appeal, catchy melodies, and simple structures. It emerged in the 1950s from rock and roll. Iconic artists: Michael Jackson ('King of Pop'), Madonna, The Beatles, Whitney Houston, Taylor Swift, Beyoncé. Pop dominates radio, streaming, and charts worldwide.",
+  "mona lisa":
+    "The **Mona Lisa** is a portrait painting by **Leonardo da Vinci**, painted between 1503–1519. It depicts a woman believed to be Lisa Gherardini. It's housed at the **Louvre Museum** in Paris and is the world's most visited, most written about, and most parodied artwork. Her enigmatic smile has captivated viewers for centuries.",
+  painting:
+    "**Painting** is one of the oldest human art forms, with cave paintings dating back 40,000+ years. Key art movements include Renaissance (Leonardo, Michelangelo), Baroque (Caravaggio, Rembrandt), Impressionism (Monet, Renoir), Post-Impressionism (Van Gogh, Cézanne), and Modern Art (Picasso, Dalí).",
+
+  // ── FOOD & CULTURE ────────────────────────────────────────────────────────
+  pizza:
+    "**Pizza** originated in **Naples, Italy** in the late 1800s. The classic Margherita pizza (tomato, mozzarella, basil) is said to have been made for Queen Margherita in 1889. Americans consume about 3 billion pizzas per year. New York-style (thin, foldable) and Chicago deep-dish are famous US regional styles.",
+  sushi:
+    "**Sushi** is a Japanese dish of vinegared rice combined with various ingredients — raw or cooked seafood, vegetables, and occasionally tropical fruits. Types include nigiri (hand-pressed), maki (roll), and sashimi (just raw fish, no rice). Japan's food safety standards make raw fish consumption safe. It became globally popular in the late 20th century.",
+  chocolate:
+    "**Chocolate** comes from **cacao beans** (*Theobroma cacao*), native to Central and South America. The Aztecs and Maya used cacao as currency and in ceremonial drinks. Spanish explorers brought it to Europe in the 1500s. **Dark chocolate** (70%+ cacao) has health benefits including antioxidants. Switzerland and Belgium are famous for fine chocolate.",
+
+  // ── PHILOSOPHY & RELIGION ─────────────────────────────────────────────────
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -890,9 +1101,126 @@ Just ask me anything!`;
     if (result !== null) return `🔢 **${expr}** = **${result}**`;
   }
 
-  // ── Smart fallback ────────────────────────────────────────────────────────
+  // ── Smart generative fallback ────────────────────────────────────────────
+  return smartFallback(raw, lower);
+}
+
+function smartFallback(raw: string, lower: string): string {
+  // Try to detect who/what the question is about
+  const whoMatch = lower.match(
+    /^(?:who (?:is|was|were)|tell me about|what do you know about|info (?:on|about)|explain)\s+(.+)/,
+  );
+  const whatMatch = lower.match(/^(?:what is|what are|what's|whats)\s+(.+)/);
+  const howMatch = lower.match(/^(?:how (?:does|do|is|are|to|did))\s+(.+)/);
+  const whyMatch = lower.match(
+    /^(?:why (?:is|are|does|do|did|was|were))\s+(.+)/,
+  );
+
+  const subject = (
+    whoMatch?.[1] ||
+    whatMatch?.[1] ||
+    howMatch?.[1] ||
+    whyMatch?.[1] ||
+    lower
+  )
+    .replace(/[?!.]+$/, "")
+    .trim();
+  const capitalSubject = subject.charAt(0).toUpperCase() + subject.slice(1);
+
+  // Domain detection for smarter responses
+  const domains: Array<{ pattern: RegExp; response: (s: string) => string }> = [
+    {
+      pattern:
+        /planet|star|comet|asteroid|nebula|galaxy|cosmos|universe|orbit|telescope|astronaut/,
+      response: (_s) =>
+        `🌌 **${capitalSubject}** is a topic in astronomy and space science. While I don't have a dedicated entry for it, you might be exploring something related to our solar system, deep space objects, or space exploration. Try asking me about specific planets, the Big Bang, black holes, or NASA missions!`,
+    },
+    {
+      pattern:
+        /war|battle|emperor|dynasty|kingdom|civilization|revolution|independence|colony|empire|ancient|medieval|conquest/,
+      response: (_s) =>
+        `📜 **${capitalSubject}** sounds like a historical topic. While I may not have the exact entry, history is one of my strengths! Try asking about World War II, the Roman Empire, the French Revolution, or specific historical figures like Napoleon or Cleopatra.`,
+    },
+    {
+      pattern:
+        /president|prime minister|politician|senator|congress|parliament|election|government|democrat|republican|vote/,
+      response: (_s) =>
+        `🏛️ **${capitalSubject}** appears to be related to politics or government. My political knowledge covers major world leaders, US presidents, democratic systems, and historical governments. Try asking about specific leaders like Obama, Lincoln, or systems like democracy vs. autocracy.`,
+    },
+    {
+      pattern:
+        /gene|cell|organ|muscle|nerve|hormone|enzyme|chromosome|species|ecosystem|habitat|evolution|fossil/,
+      response: (_s) =>
+        `🔬 **${capitalSubject}** is a biology or life science term. Biology is full of fascinating topics! Try asking about DNA, evolution, the human brain, the immune system, or specific animals and ecosystems.`,
+    },
+    {
+      pattern:
+        /element|molecule|reaction|acid|base|compound|periodic|chemical|formula|bond|oxidation/,
+      response: (_s) =>
+        `⚗️ **${capitalSubject}** sounds chemistry-related. I know about atoms, elements, the periodic table, chemical reactions, and more. Try asking about specific elements, water (H₂O), or fundamental chemistry concepts!`,
+    },
+    {
+      pattern:
+        /force|energy|wave|particle|gravity|mass|velocity|acceleration|momentum|quantum|magnetic|electric|nuclear/,
+      response: (_s) =>
+        `⚡ **${capitalSubject}** is related to physics. Physics covers everything from gravity to quantum mechanics! Try asking about Newton's laws, relativity, black holes, thermodynamics, or how electricity works.`,
+    },
+    {
+      pattern:
+        /code|program|software|app|algorithm|database|server|api|framework|language|script|debug|function|loop|variable/,
+      response: (_s) =>
+        `💻 **${capitalSubject}** is a technology or programming concept. I know about programming languages (Python, JavaScript), AI, the Internet, blockchain, cybersecurity, and more. What specifically are you trying to understand?`,
+    },
+    {
+      pattern:
+        /song|music|artist|band|album|genre|concert|instrument|melody|rhythm|lyric|singer|rapper|pop|rock|jazz|classical/,
+      response: (_s) =>
+        `🎵 **${capitalSubject}** sounds like a music question. I can discuss music genres (hip hop, pop, classical), famous composers (Beethoven, Mozart), and music history. Try asking about a specific genre or musician!`,
+    },
+    {
+      pattern:
+        /movie|film|actor|actress|director|oscar|cinema|scene|character|show|series|episode|animation|sequel/,
+      response: (_s) =>
+        `🎬 **${capitalSubject}** is related to film or entertainment. While I don't have a real-time database of movies, I can discuss film history, major studios, and cultural impact of cinema. What specifically are you curious about?`,
+    },
+    {
+      pattern:
+        /recipe|cook|food|dish|cuisine|ingredient|restaurant|flavor|spice|meal|diet|eat|bake|grill/,
+      response: (_s) =>
+        `🍽️ **${capitalSubject}** is about food or cooking. I know about various cuisines, nutritional facts, and popular dishes. Ask me about specific foods like pizza, sushi, chocolate, or about nutrition and diet!`,
+    },
+    {
+      pattern:
+        /law|legal|court|judge|lawyer|attorney|justice|crime|criminal|rights|constitution|amendment/,
+      response: (_s) =>
+        `⚖️ **${capitalSubject}** is related to law or justice. I can discuss legal concepts, constitutional rights, famous court cases, and legal systems. However, for actual legal advice, always consult a qualified attorney.`,
+    },
+    {
+      pattern:
+        /math|equation|number|calculate|formula|theorem|proof|geometry|algebra|calculus|trigonometry|matrix|graph/,
+      response: (_s) =>
+        `🔢 **${capitalSubject}** is a math concept. I can solve arithmetic, explain algebra, geometry, calculus, statistics, and more! Try typing an equation directly (like "2+2", "sqrt 144") or ask me about a specific math topic.`,
+    },
+  ];
+
+  for (const domain of domains) {
+    if (domain.pattern.test(lower)) {
+      return domain.response(subject);
+    }
+  }
+
+  // Try to give a smart "closest match" if it resembles a person's name
+  const namePattern =
+    /^(?:who (?:is|was)|tell me about)\s+([A-Za-z]+ [A-Za-z]+)/;
+  const nameMatch = raw.match(namePattern);
+  if (nameMatch) {
+    const name = nameMatch[1];
+    return `👤 I don't have a specific entry for **${name}** in my knowledge base. They might be a public figure, historical person, or specialist in their field. For the most current and detailed information, try searching **"${name}"** on Wikipedia or Google. I *do* know about many famous figures — try asking about Einstein, Cleopatra, Shakespeare, Elon Musk, or Obama!`;
+  }
+
+  // Generic smart fallback
   const fallbackSuggestions = getSuggestions(lower);
-  return `That's an interesting question! 🤔 While I don't have specific data on that topic, here are some related things you could ask me about:\n\n${fallbackSuggestions}\n\nOr try asking about **math, science, history, geography, technology, people, sports**, and much more!`;
+  return `Hmm, I don't have a specific entry for **"${raw.replace(/[?!.]+$/, "").trim()}"** yet — but I know a *lot* of stuff! Here are some things related to your topic that I *can* answer:\n\n${fallbackSuggestions}\n\nOr just ask me anything — science, history, math, tech, sports, pop culture, brainrot slang, and more! 🧠`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

@@ -133,4 +133,20 @@
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     background: oklch(0.78 0.18 195 / 0.5);
   }
+
+  /* Performance mode: disable all animations and transitions */
+  .perf-mode *,
+  .perf-mode *::before,
+  .perf-mode *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .perf-mode iframe {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    contain: strict;
+  }
 }

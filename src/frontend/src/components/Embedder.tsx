@@ -15,12 +15,7 @@ const POPUP_FEATURES =
   "width=1150,height=611,directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no";
 
 function openInPopup(src: string) {
-  const win = window.open("", "", POPUP_FEATURES);
-  if (!win) return;
-  win.document.write(
-    `<!DOCTYPE html><html><head><style>*{margin:0;padding:0}html,body{width:100%;height:100%;overflow:hidden}iframe{width:100%;height:100%;border:none}</style></head><body><iframe src="${src}" allowfullscreen></iframe></body></html>`,
-  );
-  win.document.close();
+  window.open(src, "_blank", POPUP_FEATURES);
 }
 
 export default function Embedder({ onClose }: { onClose: () => void }) {

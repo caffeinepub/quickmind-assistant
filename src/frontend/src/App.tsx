@@ -89,6 +89,7 @@ const CLOAK_OPTIONS: CloakOption[] = [
 ];
 
 const CLOAK_STORAGE_KEY = "quickmind_cloak";
+const PERF_STORAGE_KEY = "quickmind_perf";
 
 function applyCloak(option: CloakOption) {
   document.title = option.title || "QuickMind";
@@ -175,6 +176,9 @@ export default function App() {
   const [showCalc, setShowCalc] = useState(false);
   const [showEmbedder, setShowEmbedder] = useState(false);
   const [showGames, setShowGames] = useState(false);
+  const [perfMode, setPerfMode] = useState<boolean>(() => {
+    return localStorage.getItem(PERF_STORAGE_KEY) === "1";
+  });
   const [activeCloak, setActiveCloak] = useState<CloakOption>(() => {
     const saved = localStorage.getItem(CLOAK_STORAGE_KEY);
     return CLOAK_OPTIONS.find((o) => o.id === saved) ?? CLOAK_OPTIONS[0];
@@ -188,10 +192,32 @@ export default function App() {
   const addMessageMutation = useAddMessage(sessionId);
   const clearMutation = useClearHistory(sessionId);
 
+  // Apply/remove perf mode class on root
+  useEffect(() => {
+    const root = document.documentElement;
+    if (perfMode) {
+      root.classList.add("perf-mode");
+    } else {
+      root.classList.remove("perf-mode");
+    }
+    localStorage.setItem(PERF_STORAGE_KEY, perfMode ? "1" : "0");
+  }, [perfMode]);
+
   // Restore cloak on mount
   useEffect(() => {
     applyCloak(activeCloak);
   }, [activeCloak]);
+
+  // Prevent GoGuardian and other extensions from closing this tab
+  useEffect(() => {
+    const handler = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = "";
+      return "";
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, []);
 
   const handleCloakSelect = useCallback((option: CloakOption) => {
     setActiveCloak(option);
@@ -316,6 +342,30 @@ export default function App() {
           </div>
         </div>
         <div className="flex items-center gap-1.5">
+          {/* 60 FPS Performance Mode Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setPerfMode((v) => !v)}
+            data-ocid="perf.toggle_button"
+            title={
+              perfMode
+                ? "60 FPS Mode ON — click to disable"
+                : "Enable 60 FPS Mode"
+            }
+            className={`h-8 px-2 text-xs font-bold transition-all ${
+              perfMode
+                ? "text-green-400 bg-green-400/15 border border-green-400/40 hover:bg-green-400/25"
+                : "text-muted-foreground hover:text-green-400 hover:bg-green-400/10"
+            }`}
+          >
+            <span className="font-mono">60</span>
+            <span className="ml-0.5 text-[10px]">FPS</span>
+            {perfMode && (
+              <span className="ml-1 w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block" />
+            )}
+          </Button>
+
           {/* Tab Cloak Button */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
